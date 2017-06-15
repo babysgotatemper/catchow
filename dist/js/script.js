@@ -16,5 +16,11 @@ $(function() {
 		$(this).closest('.slider').find('.slider__item').fadeToggle();
 	})
 	
+	//prod show
+	$('.prod__link._green').click(function(e){
+		e.preventDefault();
+		$(this).closest('section').find('.prod-hide').fadeToggle();
+	})
+	
 	
 });
