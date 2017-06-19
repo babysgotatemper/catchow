@@ -33,7 +33,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src([''])
+    return gulp.src(['app/libs/spotlight.js'])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('app/js'));

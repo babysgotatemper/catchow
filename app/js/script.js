@@ -1,6 +1,6 @@
 $(function() {
 	
-	//manu
+	//menu
 	$('.menu-btn').click(function(){
 		$('nav').addClass('_show')
 		$('.menu-btn').fadeOut();
@@ -20,6 +20,12 @@ $(function() {
 	$('.prod__link._green').click(function(e){
 		e.preventDefault();
 		$(this).closest('section').find('.prod-hide').fadeToggle();
+	})
+	
+	//game
+	$('.spotlight').spotlight();
+	$('.game-btn, ._room').click(function(){
+		$(this).closest('.game__window').hide().next('.game__window').fadeIn();
 	})
 	
 	
