@@ -23,7 +23,7 @@ $(function() {
 	})
 	
 	//game
-	$('.spotlight').spotlight();
+//	$('.spotlight').spotlight();
 	$('.game-btn, ._room').click(function(){
 		$(this).closest('.game__window').hide().next('.game__window').fadeIn();
 	})
