@@ -85,6 +85,7 @@ function init() {
 			"mask-position-y": mskY
 		})
 	}
+
 	var el = $('.bdr');
 	el.addEventListener("touchstart", handleStart, false);
 	el.addEventListener("touchmove", handleMove, false);
