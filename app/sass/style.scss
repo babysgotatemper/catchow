@@ -728,6 +728,7 @@ game
 }
 
 .game__window {
+	overflow: hidden;
 	width: 1000px;
 	height: 600px;
 	box-sizing: border-box;
@@ -762,6 +763,7 @@ game
 		p {
 			text-align: center;
 			margin-top: 10px;
+			padding: 0 50px;
 			font-size: 22px;
 			width: auto;
 		}
@@ -799,6 +801,7 @@ game
 }
 
 .game__window__btn-wrap {
+	overflow: hidden;
 	position: absolute;
 	bottom: 50px;
 	left: 50%;
@@ -863,6 +866,64 @@ game
 			width: auto;
 		}
 	}
+}
+
+/*game hover*/
+
+.game__elem {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.game__elem._bot {
+	mask-image: url(../img/msk.png);
+	mask-repeat: no-repeat, no-repeat;
+}
+/*111*/
+.game__window._room1 .game__elem._top{
+	background: url(../img/room1.jpg);
+	background-size: cover;
+}
+.game__window._room1 .game__elem._bot {
+	background: url(../img/room1cat.jpg);
+	background-size: cover;
+}
+/*222*/
+.game__window._room2 .game__elem._top{
+	background: url(../img/room2.jpg);
+	background-size: cover;
+}
+.game__window._room2 .game__elem._bot {
+	background: url(../img/room2cat.jpg);
+	background-size: cover;
+}
+/*333*/
+.game__window._room3 .game__elem._top{
+	background: url(../img/room3.jpg);
+	background-size: cover;
+}
+.game__window._room3 .game__elem._bot {
+	background: url(../img/room3cat.jpg);
+	background-size: cover;
+}
+/*444*/
+.game__window._room4 .game__elem._top{
+	background: url(../img/room4.jpg);
+	background-size: cover;
+}
+.game__window._room4 .game__elem._bot {
+	background: url(../img/room4cat.jpg);
+	background-size: cover;
+}
+
+.bdr {
+	background: url(../img/bdr.png) no-repeat;
+	position: absolute;
+	width: 200px;
+	height: 210px;
+	top: 0;
+	left: 0;
 }
 
 //@media (max-width: 1280px) {}
