@@ -196,7 +196,6 @@ main
 main {
 	position: relative;
 	height: 650px;
-	padding-bottom: 100px;
 	&._index {
 		height: 600px;
 		padding-top: 90px;
@@ -207,7 +206,7 @@ main {
 	}
 	&._product {
 		background: url(../img/main.jpg) center no-repeat;
-		background-size: cover;
+		background-size: auto 100%;
 		&:before {
 			content: url(../img/legs.png);
 			position: absolute;
