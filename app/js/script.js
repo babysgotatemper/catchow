@@ -70,7 +70,7 @@ function init() {
 				(doc && doc.scrollTop || body && body.scrollTop || 0) -
 				(doc && doc.clientTop || body && body.clientTop || 0);
 		}
-		setMask(event.pageX - 330, event.pageY - 200);
+		setMask(event.pageX - 0, event.pageY - 0);
 	}
 
 	function setMask(x, y) {
@@ -80,7 +80,7 @@ function init() {
 			"left": mskX,
 			"top": mskY
 		});
-		$('.game__elem._bot').css({
+		$('.game__elem').css({
 			"mask-position-x": mskX,
 			"mask-position-y": mskY
 		})

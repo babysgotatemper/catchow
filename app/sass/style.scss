@@ -782,6 +782,9 @@ game
 			background-color: rgba(0, 0, 0, 0.71);
 		}
 	}
+	&._room {
+		cursor: crosshair;
+	}
 	//room
 	&._room1 {
 		background: url(../img/room1.jpg) center no-repeat;
@@ -868,54 +871,49 @@ game
 	}
 }
 
+
 /*game hover*/
 
 .game__elem {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-}
-
-.game__elem._bot {
 	mask-image: url(../img/msk.png);
 	mask-repeat: no-repeat, no-repeat;
 }
+
+
 /*111*/
-.game__window._room1 .game__elem._top{
-	background: url(../img/room1.jpg);
-	background-size: cover;
-}
-.game__window._room1 .game__elem._bot {
+
+.game__window._room1 .game__elem {
 	background: url(../img/room1cat.jpg);
 	background-size: cover;
 }
+
+
 /*222*/
-.game__window._room2 .game__elem._top{
-	background: url(../img/room2.jpg);
-	background-size: cover;
-}
-.game__window._room2 .game__elem._bot {
+
+.game__window._room2 .game__elem {
 	background: url(../img/room2cat.jpg);
 	background-size: cover;
 }
+
+
 /*333*/
-.game__window._room3 .game__elem._top{
-	background: url(../img/room3.jpg);
-	background-size: cover;
-}
-.game__window._room3 .game__elem._bot {
+
+.game__window._room3 .game__elem {
 	background: url(../img/room3cat.jpg);
 	background-size: cover;
 }
+
+
 /*444*/
-.game__window._room4 .game__elem._top{
-	background: url(../img/room4.jpg);
-	background-size: cover;
-}
-.game__window._room4 .game__elem._bot {
+
+.game__window._room4 .game__elem {
 	background: url(../img/room4cat.jpg);
 	background-size: cover;
 }
+
 .bdr {
 	background: url(../img/bdr.png) no-repeat;
 	position: absolute;
@@ -923,6 +921,35 @@ game
 	height: 210px;
 	top: 0;
 	left: 0;
+}
+
+.game__pack {
+	opacity: 0;
+	position: absolute;
+	width: 180px;
+	//	opacity: 0;
+}
+
+.game__window._room1 .game__pack {
+	bottom: 70px;
+	left: -40px;
+}
+
+.game__window._room2 .game__pack {
+	bottom: 20px;
+	right: 50%;
+}
+
+.game__window._room3 .game__pack {
+	width: 120px;
+	bottom: 150px;
+	right: 40px;
+}
+
+.game__window._room4 .game__pack {
+	width: 120px;
+	top: 190px;
+	left: 90px;
 }
 
 //@media (max-width: 1280px) {}

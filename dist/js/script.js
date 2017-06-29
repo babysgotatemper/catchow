@@ -48,3 +48,54 @@ $(function () {
 
 
 });
+
+
+function init() {
+	document.onmousemove = handleMouseMove;
+
+	function handleMouseMove(event) {
+		var dot, eventDoc, doc, body, pageX, pageY;
+
+		event = event || window.event; // IE-ism
+
+		if (event.pageX == null && event.clientX != null) {
+			eventDoc = (event.target && event.target.ownerDocument) || document;
+			doc = eventDoc.documentElement;
+			body = eventDoc.body;
+
+			event.pageX = event.clientX +
+				(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+				(doc && doc.clientLeft || body && body.clientLeft || 0);
+			event.pageY = event.clientY +
+				(doc && doc.scrollTop || body && body.scrollTop || 0) -
+				(doc && doc.clientTop || body && body.clientTop || 0);
+		}
+		setMask(event.pageX - 110, event.pageY - 220);
+	}
+
+	function setMask(x, y) {
+		mskX = x + 'px';
+		mskY = y + 'px';
+		$('.bdr').css({
+			"left": mskX,
+			"top": mskY
+		});
+		$('.game__elem').css({
+			"mask-position-x": mskX,
+			"mask-position-y": mskY
+		})
+	}
+
+	var el = $('.bdr');
+	el.addEventListener("touchstart", handleStart, false);
+	el.addEventListener("touchmove", handleMove, false);
+
+	function handleStart(e) {
+		setMask(e.changedTouches[e.changedTouches.length - 1].pageX - 100, e.changedTouches[e.changedTouches.length - 1].pageY - 100);
+	}
+
+	function handleMove(e) {
+		setMask(e.changedTouches[e.changedTouches.length - 1].pageX - 100, e.changedTouches[e.changedTouches.length - 1].pageY - 100);
+	}
+
+}
