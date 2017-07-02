@@ -47,21 +47,20 @@
 	</header>
 	<section class="game">
 
-<!--
-		<div class="game__window _room1 _text">
+		<div class="game__window _text">
 			<h2>Вам цікаво як виглядає світ очима вашого улюбленця? <br>Ви маєте унікальну можливість побачити це!</h2>
 			<ul>
 				<li>
-					Тисни "Грати"
+					Тисни <b>Грати"</b>
 				</li>
 				<li>
-					Знайди корм Cat Chow® у кожній з чотирьох кімнат
+					Знайди корм <b>at Chow®</b> у кожній з чотирьох кімнат
 				</li>
 				<li>
-					Роби шери кімнат
+					<b>Роби шери кімнат</b>
 				</li>
 				<li>
-					Бери участь у розіграші заохочень* від ТМ «Cat Chow»!
+					Бери участь у розіграші заохочень* від ТМ <b>Cat Chow®</b>!
 				</li>
 			</ul>
 			<div class="game__window__btn-wrap">
@@ -69,15 +68,12 @@
 			</div>
 
 		</div>
--->
 		<!--111-->
-		<div class="game__window _room1 _room">
-			<div class="game__elem"></div>
+		<div class="game__window _r1 _room">
+			<div class="room-bg _bot"></div>
+			<div class="room-bg _top"></div>
 			<div class="bdr"></div>
 			<img src="img/kitten-2.png" alt="" class="game__pack">
-		</div>
-		<div class="game__window _room1 _text">
-			<img src="img/kitten-2.png" alt="">
 			<p>
 				Ви дізнались, як виглядає вітальня очима здорового та активного котика! Зробіть шер у fb, щоб поділитися враженнями з друзями, або тисніть далі, щоб дізнатися, як виглядатимуть інші кімнати очима котиків, які ласують кормом Cat Chow® (з комплексом Naturium®) та взяти участь у розіграші заохочень*!
 			</p>
@@ -86,13 +82,11 @@
 			</div>
 		</div>
 		<!--222-->
-		<div class="game__window _room2 _room">
-			<div class="game__elem"></div>
+		<div class="game__window _r2 _room">
+			<div class="room-bg _bot"></div>
+			<div class="room-bg _top"></div>
 			<div class="bdr"></div>
 			<img src="img/kitten-2.png" alt="" class="game__pack">
-		</div>
-		<div class="game__window _room2 _text">
-			<img src="img/kitten-2.png" alt="">
 			<p>
 				Зелені джунглі посеред міста чи оаза в пустелі? Зробіть шер та тисніть далі, щоб дізнатися, як бачать світ котики, які харчуються натуральним та корисним кормом Cat Chow®. Щоб взяти участь у розіграші заохочень*, пройдіть усі 4 кімнати!
 			</p>
@@ -101,13 +95,11 @@
 			</div>
 		</div>
 		<!--333 -->
-		<div class="game__window _room3 _room">
-			<div class="game__elem"></div>
+		<div class="game__window _r3 _room">
+			<div class="room-bg _bot"></div>
+			<div class="room-bg _top"></div>
 			<div class="bdr"></div>
 			<img src="img/kitten-2.png" alt="" class="game__pack">
-		</div>
-		<div class="game__window _room3 _text">
-			<img src="img/kitten-2.png" alt="">
 			<p>
 				Світ очима домашнього улюбленця такий яскравий та неймовірний! Зробіть шер та тисніть далі, щоб дізнатися, як виглядатиме четверта кімната очима котика, який їсть повнораціонний корм Cat Chow® без доданих барвників, доданих штучних ароматизаторів і доданих синтетичних консервантів та стати учасником розіграшу заохочень*!
 			</p>
@@ -116,14 +108,11 @@
 			</div>
 		</div>
 		<!--444		-->
-		<div class="game__window _room4 _room">
-			<div class="game__elem"></div>
+		<div class="game__window _r4 _room">
+			<div class="room-bg _bot"></div>
+			<div class="room-bg _top"></div>
 			<div class="bdr"></div>
 			<img src="img/kitten-2.png" alt="" class="game__pack">
-		</div>
-
-		<div class="game__window _room4 _text">
-			<img src="img/kitten-2.png" alt="">
 			<h2>Вітаємо!</h2>
 			<p>
 				Ви пройшли усі кімнати та дізнались як харчування вливає на життя та активність вашого кота. <br>Щоб прийняти участь у розіграші заохочень* від ТМ «Cat Chow», <br>зробіть шер у FB або заповніть анкету.
@@ -135,7 +124,7 @@
 		</div>
 
 		<div class="game__window _room4 _text">
-			<form action="">
+			<form name="anketa" action="">
 				<p>
 					Заповніть анкету щоб прийняти участь <br> у розіграші призів від ТМ Cat Chow®
 				</p>
@@ -153,7 +142,7 @@
 					<label for="sex2"><input type="radio" id="sex2" name="sex">Ні</label>
 				</div>
 				<div class="game__window__btn-wrap">
-					<button class="link _red">Прийняти участь</button>
+					<button type="submit" form="anketa"  class="link _red">Прийняти участь</button>
 				</div>
 			</form>
 		</div>

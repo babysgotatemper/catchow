@@ -70,7 +70,7 @@ function init() {
 				(doc && doc.scrollTop || body && body.scrollTop || 0) -
 				(doc && doc.clientTop || body && body.clientTop || 0);
 		}
-		setMask(event.pageX - 110, event.pageY - 220);
+		setMask(event.pageX - 0, event.pageY - 0);
 	}
 
 	function setMask(x, y) {
