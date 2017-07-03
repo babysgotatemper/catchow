@@ -49,6 +49,17 @@
 		img {
 			max-width: 200px;
 		}
+		ul li{
+			list-style: none;
+			position: relative;
+			margin: 10px 0;
+			img{
+				position: absolute;
+				top: 50%;
+				left: -30px;
+				transform: translate(-50%, -50%);
+			}
+		}
 		ul,
 		p {
 			width: 700px;
@@ -59,11 +70,13 @@
 		p {
 			 position: absolute;
 			 top: 280px;
+			left: 0;
 			text-align: center;
 			margin-top: 10px;
-			padding: 0 50px;
+			padding: 0 20px;
+			box-sizing: border-box;
 			font-size: 22px;
-			width: auto;
+			width: 100%;
 		}
 		label {
 			display: block;
@@ -150,8 +163,8 @@
 		line-height: 2;
 		background-color: transparent;
 		border: 0 none;
-		border-bottom: 2px solid #fff;
-		color: #fff;
+		border-bottom: 2px solid #004990;
+		color: #004990;
 		text-align: center;
 		outline: none;
 		&[type="phone"] {

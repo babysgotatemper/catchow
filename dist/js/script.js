@@ -41,61 +41,96 @@ $(function () {
 
 	//game
 	//	$('.spotlight').spotlight();
-	$('.game-btn, ._room').click(function () {
+	var $gameWindow;
+
+	$('.game-btn').click(function () {
 		$(this).closest('.game__window').hide().next('.game__window').fadeIn();
-	})
+	});
+	$('.game__pack').click(function () {
+		$gameWindow = $(this).closest('.game__window')
+		$gameWindow.find('.room-bg._bot, .bdr').fadeOut(600);
+		$gameWindow.find('.room-bg._top').css("mask-image", "none");
+		$gameWindow.find('.game__pack').addClass('_center');
+
+		setTimeout(function () {
+			$gameWindow.addClass('_text');
+		}, 2000);
+
+	});
+
 
 
 
 });
 
-
 function init() {
-	document.onmousemove = handleMouseMove;
+	var gameWindowX = $(".game__window").offset().top;
+	var gameWindowY = $(".game__window").offset().left;
+	$(".game__window").mousemove(function (event) {
+		var x = event.pageX;
+		var y = event.pageY;
+		console.log(x, y);
 
-	function handleMouseMove(event) {
-		var dot, eventDoc, doc, body, pageX, pageY;
-
-		event = event || window.event; // IE-ism
-
-		if (event.pageX == null && event.clientX != null) {
-			eventDoc = (event.target && event.target.ownerDocument) || document;
-			doc = eventDoc.documentElement;
-			body = eventDoc.body;
-
-			event.pageX = event.clientX +
-				(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
-				(doc && doc.clientLeft || body && body.clientLeft || 0);
-			event.pageY = event.clientY +
-				(doc && doc.scrollTop || body && body.scrollTop || 0) -
-				(doc && doc.clientTop || body && body.clientTop || 0);
-		}
-		setMask(event.pageX - 0, event.pageY - 0);
-	}
-
-	function setMask(x, y) {
-		mskX = x + 'px';
-		mskY = y + 'px';
+		mskX = x-gameWindowX-220 + 'px';
+		mskY = y-gameWindowY+20 + 'px';
 		$('.bdr').css({
 			"left": mskX,
 			"top": mskY
 		});
-		$('.game__elem').css({
+		$('.room-bg._top').css({
 			"mask-position-x": mskX,
 			"mask-position-y": mskY
 		})
-	}
-
-	var el = $('.bdr');
-	el.addEventListener("touchstart", handleStart, false);
-	el.addEventListener("touchmove", handleMove, false);
-
-	function handleStart(e) {
-		setMask(e.changedTouches[e.changedTouches.length - 1].pageX - 100, e.changedTouches[e.changedTouches.length - 1].pageY - 100);
-	}
-
-	function handleMove(e) {
-		setMask(e.changedTouches[e.changedTouches.length - 1].pageX - 100, e.changedTouches[e.changedTouches.length - 1].pageY - 100);
-	}
-
+	});
 }
+
+
+//function init() {
+//    document.onmousemove = handleMouseMove;
+//
+//    function handleMouseMove(event) {
+//        var dot, eventDoc, doc, body, pageX, pageY;
+//
+//        event = event || window.event; // IE-ism
+//
+//        if (event.pageX == null && event.clientX != null) {
+//            eventDoc = (event.target && event.target.ownerDocument) || document;
+//            doc = eventDoc.documentElement;
+//            body = eventDoc.body;
+//
+//            event.pageX = event.clientX +
+//                (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+//                (doc && doc.clientLeft || body && body.clientLeft || 0);
+//            event.pageY = event.clientY +
+//                (doc && doc.scrollTop || body && body.scrollTop || 0) -
+//                (doc && doc.clientTop || body && body.clientTop || 0);
+//        }
+//        setMask(event.pageX - 0, event.pageY - 0);
+//    }
+//
+//    function setMask(x, y) {
+//        mskX = x + 'px';
+//        mskY = y + 'px';
+//        $('.bdr').css({
+//            "left": mskX,
+//            "top": mskY
+//        });
+//        $('.room-bg._top').css({
+//            "mask-position-x": mskX,
+//            "mask-position-y": mskY
+//        })
+//    }
+//
+//    var el = $('.bdr');
+//    el.addEventListener("touchstart", handleStart, false);
+//    el.addEventListener("touchmove", handleMove, false);
+//
+//    function handleStart(e) {
+//        setMask(e.changedTouches[e.changedTouches.length - 1].pageX - 100, e.changedTouches[e.changedTouches.length - 1].pageY - 100);
+//    }
+//
+//    function handleMove(e) {
+//        setMask(e.changedTouches[e.changedTouches.length - 1].pageX - 100, e.changedTouches[e.changedTouches.length - 1].pageY - 100);
+//    }
+//
+//}
