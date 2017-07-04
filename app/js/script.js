@@ -19,7 +19,7 @@ $(function () {
 	})
 
 	//cat paw
-	$('.rules__button')
+	$('.rules-cat')
 		.mouseover(function () {
 			$('.rules-cat-leg').addClass('paw-anim');
 		})
@@ -45,7 +45,10 @@ $(function () {
 
 	$('.game-btn').click(function () {
 		$(this).closest('.game__window').hide().next('.game__window').fadeIn();
+		panagination();
 	});
+
+
 	$('.game__pack').click(function () {
 		$gameWindow = $(this).closest('.game__window')
 		$gameWindow.find('.room-bg._bot, .bdr').fadeOut(600);
@@ -56,23 +59,43 @@ $(function () {
 			$gameWindow.addClass('_text');
 		}, 2000);
 
+
 	});
 
+	var panNum = 0;
+	function panagination() {
+		panNum++;
+		$('.panagination__item._' + panNum + '').addClass('_active');
+	}
+
+	$('.game-gender').click(function () {
+		$('.game-gender').removeClass('_active')
+		$(this).addClass('_active')
+	})
+	$('.game-sex').click(function () {
+		$('.game-sex').removeClass('_active')
+		$(this).addClass('_active')
+	});
+
+	$('#rules-check').click(function () {
+		$('#block').fadeToggle();
+		console.log('zsdbgz');
+	});
 
 
 
 });
 
+
 function init() {
-	var gameWindowX = $(".game__window").offset().top;
-	var gameWindowY = $(".game__window").offset().left;
+	var gameWindowY = $(".game__window").offset().top;
+	var gameWindowX = $(".game__window").offset().left;
 	$(".game__window").mousemove(function (event) {
 		var x = event.pageX;
 		var y = event.pageY;
-		console.log(x, y);
 
-		mskX = x-gameWindowX-220 + 'px';
-		mskY = y-gameWindowY+20 + 'px';
+		mskX = x - gameWindowX - 100 + 'px';
+		mskY = y - gameWindowY - 105 + 'px';
 		$('.bdr').css({
 			"left": mskX,
 			"top": mskY
