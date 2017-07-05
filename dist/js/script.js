@@ -1,9 +1,3 @@
-wow = new WOW({
-	offset: 400,
-	mobile: false
-})
-wow.init();
-
 $(function () {
 	$(".smooth-scroll").on("click", function (e) {
 		e.preventDefault();

@@ -1,9 +1,3 @@
-wow = new WOW({
-	offset: 400,
-	mobile: false
-})
-wow.init();
-
 $(function () {
 	$(".smooth-scroll").on("click", function (e) {
 		e.preventDefault();
@@ -46,13 +40,19 @@ $(function () {
 	})
 
 	//game
-	//	$('.spotlight').spotlight();
 	var $gameWindow;
 
 	$('.game-btn').click(function () {
+//		gameTop();
 		$(this).closest('.game__window').hide().next('.game__window').fadeIn();
 		panagination();
 	});
+
+//	function gameTop(){
+//		$('html, body').animate({
+//			scrollTop: $('.game__window').offset().top
+//		}, 500);
+//	}
 
 
 	$('.game__pack').click(function () {
