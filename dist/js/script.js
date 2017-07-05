@@ -40,13 +40,19 @@ $(function () {
 	})
 
 	//game
-	//	$('.spotlight').spotlight();
 	var $gameWindow;
 
 	$('.game-btn').click(function () {
+//		gameTop();
 		$(this).closest('.game__window').hide().next('.game__window').fadeIn();
 		panagination();
 	});
+
+//	function gameTop(){
+//		$('html, body').animate({
+//			scrollTop: $('.game__window').offset().top
+//		}, 500);
+//	}
 
 
 	$('.game__pack').click(function () {
