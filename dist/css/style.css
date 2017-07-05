@@ -738,6 +738,13 @@ game
       -webkit-border-radius: inherit;
               border-radius: inherit; }
 
+.game__window svg {
+  width: 1000px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 .game__window__btn-wrap {
   overflow: hidden;
   position: absolute;
@@ -921,13 +928,12 @@ game
   width: 100%;
   height: 100%;
   -webkit-transition: opacity 1s;
-  transition: opacity 1s; }
+  transition: opacity 1s;
+  width: 1000px;
+  height: 600px; }
 
 .room-bg._top {
-  -webkit-mask-image: url(../img/msk.png);
-          mask-image: url(../img/msk.png);
-  -webkit-mask-repeat: no-repeat, no-repeat;
-          mask-repeat: no-repeat, no-repeat; }
+  z-index: 0; }
 
 .bdr {
   background: url(../img/bdr.png) no-repeat;

@@ -136,6 +136,14 @@
 	//room
 }
 
+.game__window svg{
+	width: 1000px;
+	height: 600px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 .game__window__btn-wrap {
 	overflow: hidden;
 	position: absolute;
@@ -370,11 +378,14 @@
 	width: 100%;
 	height: 100%;
 	transition: opacity 1s;
+	width: 1000px;
+	height: 600px;
 }
 
 .room-bg._top {
-	mask-image: url(../img/msk.png);
-	mask-repeat: no-repeat, no-repeat;
+	z-index: 0;
+//	mask-image: url(../img/msk.png);
+//	mask-repeat: no-repeat, no-repeat;
 }
 
 .bdr {

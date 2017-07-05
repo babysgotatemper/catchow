@@ -52,6 +52,7 @@ $(function () {
 	$('.game__pack').click(function () {
 		$gameWindow = $(this).closest('.game__window')
 		$gameWindow.find('.room-bg._bot, .bdr').fadeOut(600);
+		$gameWindow.find('svg').hide();
 		$gameWindow.find('.room-bg._top').css("mask-image", "none");
 		$gameWindow.find('.game__pack').addClass('_center');
 
@@ -96,6 +97,12 @@ function init() {
 
 		mskX = x - gameWindowX - 100 + 'px';
 		mskY = y - gameWindowY - 105 + 'px';
+
+		$('#svgmask1_image').attr({x: mskX, y: mskY});
+		$('#svgmask2_image').attr({x: mskX, y: mskY});
+		$('#svgmask3_image').attr({x: mskX, y: mskY});
+		$('#svgmask4_image').attr({x: mskX, y: mskY});
+
 		$('.bdr').css({
 			"left": mskX,
 			"top": mskY
