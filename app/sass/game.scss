@@ -47,9 +47,9 @@
 	&:first-child() {
 		display: block;
 	}
-	&._room {
-		cursor: crosshair;
-	}
+//	&._room svg{
+//		cursor: crosshair;
+//	}
 	&._text {
 		position: relative;
 		text-align: center;
@@ -106,7 +106,7 @@
 			opacity: 0.1;
 		}
 		.game__pack {
-			margin-top: -100px;
+			margin-top: -150px;
 		}
 		p,
 		.game__window__btn-wrap {
@@ -395,15 +395,16 @@
 	height: 210px;
 	top: 0;
 	left: 0;
+	cursor: none;
 }
 
 .game__window .game__pack {
 	position: absolute;
 	z-index: 100;
 	width: 180px;
-	transition: all 1s;
 	opacity: 0;
 	transition: all .5s;
+	cursor: none;
 	&._center {
 		opacity: 1;
 		top: 50% !important;

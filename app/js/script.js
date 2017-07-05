@@ -1,3 +1,9 @@
+wow = new WOW({
+	offset: 400,
+	mobile: false
+})
+wow.init();
+
 $(function () {
 	$(".smooth-scroll").on("click", function (e) {
 		e.preventDefault();
@@ -64,6 +70,7 @@ $(function () {
 	});
 
 	var panNum = 0;
+
 	function panagination() {
 		panNum++;
 		$('.panagination__item._' + panNum + '').addClass('_active');
@@ -98,10 +105,22 @@ function init() {
 		mskX = x - gameWindowX - 100 + 'px';
 		mskY = y - gameWindowY - 105 + 'px';
 
-		$('#svgmask1_image').attr({x: mskX, y: mskY});
-		$('#svgmask2_image').attr({x: mskX, y: mskY});
-		$('#svgmask3_image').attr({x: mskX, y: mskY});
-		$('#svgmask4_image').attr({x: mskX, y: mskY});
+		$('#svgmask1_image').attr({
+			x: mskX,
+			y: mskY
+		});
+		$('#svgmask2_image').attr({
+			x: mskX,
+			y: mskY
+		});
+		$('#svgmask3_image').attr({
+			x: mskX,
+			y: mskY
+		});
+		$('#svgmask4_image').attr({
+			x: mskX,
+			y: mskY
+		});
 
 		$('.bdr').css({
 			"left": mskX,

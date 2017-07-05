@@ -62,6 +62,7 @@ header {
   left: 0;
   right: 0;
   width: 100%;
+  min-width: 1024px;
   height: 80px;
   background-color: rgba(120, 171, 113, 0.5); }
 
@@ -210,8 +211,9 @@ index
     margin-bottom: 45px; }
     .index-main-info p a {
       color: #ce000c; }
-  .index-main-info:before {
-    content: url(../img/index-text-side-img.png);
+  .index-main-info .leaves {
+    width: 297px;
+    height: 499px;
     position: absolute;
     z-index: -1;
     bottom: 0px;
@@ -219,6 +221,22 @@ index
     -webkit-transform: translate(-170px, 100px);
         -ms-transform: translate(-170px, 100px);
             transform: translate(-170px, 100px); }
+    .index-main-info .leaves .leaf__1 {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .index-main-info .leaves .leaf__2 {
+      position: absolute;
+      top: 25px;
+      left: 100px; }
+    .index-main-info .leaves .leaf__3 {
+      position: absolute;
+      top: 170px;
+      left: 50px; }
+    .index-main-info .leaves .leaf__4 {
+      position: absolute;
+      bottom: 0;
+      left: 0; }
 
 .rules {
   position: relative; }
@@ -489,7 +507,8 @@ section {
 
 .center-img {
   display: block;
-  margin: auto; }
+  margin: auto;
+  height: 140px; }
 
 /*section2*/
 .prod-name {
@@ -670,8 +689,6 @@ game
     display: none; }
   .game__window:first-child {
     display: block; }
-  .game__window._room {
-    cursor: crosshair; }
   .game__window._text {
     position: relative;
     text-align: center;
@@ -722,7 +739,7 @@ game
     .game__window._text .room-bg {
       opacity: 0.1; }
     .game__window._text .game__pack {
-      margin-top: -100px; }
+      margin-top: -150px; }
     .game__window._text p,
     .game__window._text .game__window__btn-wrap {
       display: block; }
@@ -941,17 +958,17 @@ game
   width: 200px;
   height: 210px;
   top: 0;
-  left: 0; }
+  left: 0;
+  cursor: none; }
 
 .game__window .game__pack {
   position: absolute;
   z-index: 100;
   width: 180px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
   opacity: 0;
   -webkit-transition: all .5s;
-  transition: all .5s; }
+  transition: all .5s;
+  cursor: none; }
   .game__window .game__pack._center {
     opacity: 1;
     top: 50% !important;
