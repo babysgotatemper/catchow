@@ -156,7 +156,8 @@ main
 */
 main {
   position: relative;
-  height: 650px; }
+  height: 650px;
+  display: block; }
   main._index {
     height: 600px;
     padding-top: 90px;
@@ -507,8 +508,7 @@ section {
 
 .center-img {
   display: block;
-  margin: auto;
-  height: 140px; }
+  margin: auto; }
 
 /*section2*/
 .prod-name {
