@@ -76,8 +76,6 @@ header {
 	min-width: 1024px;
 	height: 80px;
 	background-color: rgba(120, 171, 113, 0.5);
-	overflow-x: hidden;
-	overflow-y: visible;
 }
 
 .header__logo {
@@ -177,6 +175,11 @@ article {
 /*
 main
 */
+.wrapper{
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+}
 
 main {
 	position: relative;
@@ -188,7 +191,6 @@ main {
 		box-sizing: border-box;
 		background: url(../img/bg-main-index.jpg) center no-repeat;
 		background-size: cover;
-		margin-bottom: 560px;
 	}
 	&._product {
 		background: url(../img/main.jpg) center no-repeat;
@@ -233,8 +235,14 @@ index
 	text-shadow: 0px 0px 25px #000000;
 }
 
+.index-info-wrap{
+	height: 560px;
+	position: relative;
+}
+
 .index-main-info {
 	position: relative;
+	top: -280px;
 	background-color: #fff;
 	width: 630px;
 	margin: 30px auto 0;
@@ -504,6 +512,7 @@ section {
 	background-color: #fff;
 	padding: 40px 8px;
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 
@@ -730,11 +739,7 @@ game
 */
 @import "app/sass/game.scss";
 //@media (max-width: 1280px) {}
-@media (max-width: 1024px) {
-	.rules-cat{
-		width: 380px;
-	}
-}
+@media (max-width: 1024px) {}
 //@media (max-width: 768px) {}
 //@media (max-width: 640px) {}
 //@media (max-width: 480px) {}
