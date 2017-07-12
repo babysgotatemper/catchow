@@ -43,16 +43,16 @@ $(function () {
 	var $gameWindow;
 
 	$('.game-btn').click(function () {
-//		gameTop();
+		//		gameTop();
 		$(this).closest('.game__window').hide().next('.game__window').fadeIn();
 		panagination();
 	});
 
-//	function gameTop(){
-//		$('html, body').animate({
-//			scrollTop: $('.game__window').offset().top
-//		}, 500);
-//	}
+	//	function gameTop(){
+	//		$('html, body').animate({
+	//			scrollTop: $('.game__window').offset().top
+	//		}, 500);
+	//	}
 
 
 	$('.game__pack').click(function () {
@@ -98,40 +98,43 @@ $(function () {
 function init() {
 	var gameWindowY = $(".game__window").offset().top;
 	var gameWindowX = $(".game__window").offset().left;
+
+	//mobile
+	$(".game__window").on( "vmousemove", function(event) {
+		letsMove(event);
+	});
+	
 	$(".game__window").mousemove(function (event) {
+		letsMove(event);
+	});
+	
+	function letsMove(event){
 		var x = event.pageX;
 		var y = event.pageY;
 
 		mskX = x - gameWindowX - 100 + 'px';
 		mskY = y - gameWindowY - 105 + 'px';
 
-		$('#svgmask1_image').attr({
-			x: mskX,
-			y: mskY
-		});
-		$('#svgmask2_image').attr({
-			x: mskX,
-			y: mskY
-		});
-		$('#svgmask3_image').attr({
-			x: mskX,
-			y: mskY
-		});
-		$('#svgmask4_image').attr({
-			x: mskX,
-			y: mskY
-		});
+		$('#svgmask1_image').attr({x: mskX,	y: mskY});
+		$('#svgmask2_image').attr({x: mskX,	y: mskY});
+		$('#svgmask3_image').attr({x: mskX,	y: mskY});
+		$('#svgmask4_image').attr({x: mskX,	y: mskY});
 
-		$('.bdr').css({
-			"left": mskX,
-			"top": mskY
-		});
-		$('.room-bg._top').css({
-			"mask-position-x": mskX,
-			"mask-position-y": mskY
-		})
-	});
+		$('.bdr').css({"left": mskX, "top": mskY});
+		$('.room-bg._top').css({"mask-position-x": mskX, "mask-position-y": mskY})		
+	}
 }
+//test
+
+
+function move(e) {
+    $element.css({
+        left: (e.pageX - 10) + 'px',
+        top: (e.pageY - 10) + 'px',
+        cursor: 'pointer'
+    });
+}
+
 
 
 //function init() {

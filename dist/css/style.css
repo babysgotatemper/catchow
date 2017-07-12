@@ -157,7 +157,8 @@ main
 .wrapper {
   position: relative;
   width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 main {
   position: relative;
@@ -743,6 +744,12 @@ game
               box-sizing: border-box;
       font-size: 22px;
       width: 100%; }
+      .game__window._text .game-text._center {
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+            -ms-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+        font-weight: bold; }
     .game__window._text label {
       display: block;
       text-align: center; }

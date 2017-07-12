@@ -97,6 +97,11 @@
 			box-sizing: border-box;
 			font-size: 22px;
 			width: 100%;
+			&._center{
+				top: 50%;
+				transform: translate(0, -50%);
+				font-weight: bold;
+			}
 		}
 		label {
 			display: block;
