@@ -33,7 +33,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src(['app/libs/spotlight.js'])
+    return gulp.src(['app/libs/wow/dist/wow.js'])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('app/js'));
@@ -61,7 +61,7 @@ gulp.task('clean', function () {
 
 gulp.task('img', function () {
     return gulp.src('app/img/**/*')
-        .pipe(imagemin())
+//        .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
 });
 //    return gulp.src('app/img/**/*')

@@ -40,18 +40,25 @@ $(function () {
 	})
 
 	//game
-	//	$('.spotlight').spotlight();
 	var $gameWindow;
 
 	$('.game-btn').click(function () {
+		//		gameTop();
 		$(this).closest('.game__window').hide().next('.game__window').fadeIn();
 		panagination();
 	});
+
+	//	function gameTop(){
+	//		$('html, body').animate({
+	//			scrollTop: $('.game__window').offset().top
+	//		}, 500);
+	//	}
 
 
 	$('.game__pack').click(function () {
 		$gameWindow = $(this).closest('.game__window')
 		$gameWindow.find('.room-bg._bot, .bdr').fadeOut(600);
+		$gameWindow.find('svg').hide();
 		$gameWindow.find('.room-bg._top').css("mask-image", "none");
 		$gameWindow.find('.game__pack').addClass('_center');
 
@@ -63,6 +70,7 @@ $(function () {
 	});
 
 	var panNum = 0;
+
 	function panagination() {
 		panNum++;
 		$('.panagination__item._' + panNum + '').addClass('_active');
@@ -90,22 +98,43 @@ $(function () {
 function init() {
 	var gameWindowY = $(".game__window").offset().top;
 	var gameWindowX = $(".game__window").offset().left;
+
+	//mobile
+	$(".game__window").on( "vmousemove", function(event) {
+		letsMove(event);
+	});
+	
 	$(".game__window").mousemove(function (event) {
+		letsMove(event);
+	});
+	
+	function letsMove(event){
 		var x = event.pageX;
 		var y = event.pageY;
 
 		mskX = x - gameWindowX - 100 + 'px';
 		mskY = y - gameWindowY - 105 + 'px';
-		$('.bdr').css({
-			"left": mskX,
-			"top": mskY
-		});
-		$('.room-bg._top').css({
-			"mask-position-x": mskX,
-			"mask-position-y": mskY
-		})
-	});
+
+		$('#svgmask1_image').attr({x: mskX,	y: mskY});
+		$('#svgmask2_image').attr({x: mskX,	y: mskY});
+		$('#svgmask3_image').attr({x: mskX,	y: mskY});
+		$('#svgmask4_image').attr({x: mskX,	y: mskY});
+
+		$('.bdr').css({"left": mskX, "top": mskY});
+		$('.room-bg._top').css({"mask-position-x": mskX, "mask-position-y": mskY})		
+	}
 }
+//test
+
+
+function move(e) {
+    $element.css({
+        left: (e.pageX - 10) + 'px',
+        top: (e.pageY - 10) + 'px',
+        cursor: 'pointer'
+    });
+}
+
 
 
 //function init() {

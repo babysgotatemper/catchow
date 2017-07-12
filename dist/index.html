@@ -2,18 +2,19 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
 	<title>Cat Chow</title>
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!--
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">    
-    <meta property="og:image" content="http://.../images/share.jpg">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="http://.../»">
--->
+
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:image" content="http://babysgotatemper.cc.ua/dist/img/share.jpg">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="http://babysgotatemper.cc.ua/dist/»">
+
 
 
 	<!--mobile & IE9- support-->
@@ -25,30 +26,35 @@
 </head>
 
 <body>
+
 	<!--
     <div class="social">
-      <a href="http://facebook.com/sharer/sharer.php?u=http://.../"><i>&#xf09a;</i></a>
+      <a href="http://facebook.com/sharer/sharer.php?u=http://babysgotatemper.cc.ua/dist/"><i>&#xf09a;</i></a>
     </div>
 -->
-	<header>
-		<a href="#" class="header__logo"><img src="img/logo.png" alt=""></a>
-		<a class="link _red menu-btn">Меню</a>
-		<nav>
-			<button class="nav__close">	&times;</button>
-			<a href="index.html" class="nav__item active"><img src="img/menu-icons_01.png" alt="">Головна сторінка</a>
-			<a href="product.html" class="nav__item"><img src="img/menu-icons_02.png" alt="">Про корм</a>
-			<a href="game.html" class="nav__item"><img src="img/menu-icons_03.png" alt="">Гра</a>
-<!--						<a href="stories.html" class="nav__item"><img src="img/menu-icons_04.png" alt="">Історії котовласників</a>-->
-<!--						<a href="test.html" class="nav__item"><img src="img/menu-icons_05.png" alt="">Тест</a>-->
-<!--						<a href="foto.html" class="nav__item"><img src="img/menu-icons_06.png" alt="">Фоторамки</a>-->
-<!--						<a href="winners.html" class="nav__item"><img src="img/menu-icons_07.png" alt="">Переможці</a>-->
-			<a href="#" class="nav__item"><img src="img/menu-icons_08.png" alt="">Правила</a>
-		</nav>
-	</header>
+	<div class="wrapper">
+		<header>
+			<a href="#" class="header__logo"><img src="img/logo.png" alt=""></a>
+			<a class="link _red menu-btn">Меню</a>
+			<nav>
+				<button class="nav__close">	&times;</button>
+				<a href="index.html" class="nav__item active"><img src="img/menu-icons_01.png" alt="">Головна сторінка</a>
+				<a href="product.html" class="nav__item"><img src="img/menu-icons_02.png" alt="">Про корм</a>
+				<a href="game.html" class="nav__item"><img src="img/menu-icons_03.png" alt="">Гра</a>
+				<!--						<a href="stories.html" class="nav__item"><img src="img/menu-icons_04.png" alt="">Історії котовласників</a>-->
+				<!--						<a href="test.html" class="nav__item"><img src="img/menu-icons_05.png" alt="">Тест</a>-->
+				<!--						<a href="foto.html" class="nav__item"><img src="img/menu-icons_06.png" alt="">Фоторамки</a>-->
+				<!--						<a href="winners.html" class="nav__item"><img src="img/menu-icons_07.png" alt="">Переможці</a>-->
+				<a href="#" class="nav__item"><img src="img/menu-icons_08.png" alt="">Правила</a>
+			</nav>
+		</header>
+
 	<main class="_index">
 		<h1 class="index-title">
 			Світ очима <br>кота
 		</h1>
+	</main>
+	<div class="index-info-wrap">
 		<div class="index-main-info" id="game-link">
 			<p>
 				Як часто ви думали про те, наскільки корисний корм вашого кота? Чи отримує він всі необхідні йому поживні речовини з кормом? Корм Cat Chow® з комплексом Naturium® пропонує вам подивитися на світ очима свого домашнього улюбленця.
@@ -67,10 +73,16 @@
 			</div>
 			<div class="rules-cat">
 				<img src="img/cat_paw.png" alt="" class="rules-cat-leg">
-				<img src="img/cat_body.png" alt="" class="rules-cat-boby">
+				<!--				<img src="img/cat_body.png" alt="" class="rules-cat-boby">-->
+			</div>
+			<div class="leaves">
+				<img src="img/leaf-01.jpg" alt="" data-wow-duration=".4s" class="leaf__1 wow fadeInDown">
+				<img src="img/leaf-02.jpg" alt="" data-wow-duration=".4s" data-wow-delay=".5s" class="leaf__2 wow fadeInDown">
+				<img src="img/leaf-03.jpg" alt="" data-wow-duration=".4s" data-wow-delay=".1s" class="leaf__3 wow fadeInDown">
+				<img src="img/leaf-04.jpg" alt="" class="leaf__4">
 			</div>
 		</div>
-	</main>
+	</div>
 
 	<!--	
 
@@ -80,8 +92,7 @@ index info
 	<div class="index-info">
 		<p>
 			Світ кота тільки на перший погляд здається таким безтурботним і нецікавим. Насправді в нього теж є, свій, особливий графік. Прокинутись о 5 ранку, розбудити господарів, щоб отримати порцію здорової їжі, знайти затишне місце для ранкового сну, а потім продовжити свій день так, як йому підказують його інстинкти – все це потребує зусиль, зібраності та енергії.
-			<br><br>
-			Від природи коти активні, але їх життя напряму залежить від харчування. Тому корм для кота має бути максимально збалансованим і корисним. Дізнайтеся про переваги Cat Chow® - корму з комплексом Naturium®, без доданих штучних барвників, доданих штучних ароматизаторів і доданих синтетичних консервантів та спостерігайте, як життя кота зміниться на ваших очах!
+			<br><br> Від природи коти активні, але їх життя напряму залежить від харчування. Тому корм для кота має бути максимально збалансованим і корисним. Дізнайтеся про переваги Cat Chow® - корму з комплексом Naturium®, без доданих штучних барвників, доданих штучних ароматизаторів і доданих синтетичних консервантів та спостерігайте, як життя кота зміниться на ваших очах!
 		</p>
 		<a href="product.html" class="link _red">Дізнатись більше про корм</a>
 	</div>
@@ -148,9 +159,18 @@ ligal
 		<a href="https://www.facebook.com/purinaukraine/?fref=ts" target="_blank" class="footer__fb"></a>
 	</footer>
 
+	</div>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+		wow = new WOW({
+			offset: 300,
+			mobile: false
+		})
+		wow.init();
+	</script>
 
 </body>
 
