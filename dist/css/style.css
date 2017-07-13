@@ -712,6 +712,7 @@ game
       font-weight: 700;
       line-height: 36px; }
     .game__window._text b {
+      font-size: inherit;
       font-family: inherit;
       color: inherit;
       font-weight: 700; }
@@ -735,7 +736,7 @@ game
       list-style-type: decimal; }
     .game__window._text .game-text {
       position: absolute;
-      top: 280px;
+      top: 255px;
       left: 0;
       text-align: center;
       margin-top: 10px;
@@ -819,7 +820,8 @@ game
   cursor: pointer;
   padding-left: 20px;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  margin-top: 10px; }
   .rules-check a {
     text-decoration: underline; }
 
@@ -865,7 +867,10 @@ game
       display: inline-block;
       width: 30px;
       position: static;
-      opacity: 1; }
+      opacity: 1;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
   .input-wrap label {
     cursor: pointer;
     font-size: 24px;

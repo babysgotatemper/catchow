@@ -63,6 +63,7 @@
 			line-height: 36px;
 		}
 		b {
+			font-size: inherit;
 			font-family: inherit;
 			color: inherit;
 			font-weight: 700;
@@ -89,7 +90,7 @@
 		}
 		.game-text {
 			position: absolute;
-			top: 280px;
+			top: 255px;
 			left: 0;
 			text-align: center;
 			margin-top: 10px;
@@ -193,6 +194,7 @@
 	padding-left: 20px;
 	position: relative;
 	z-index: 10;
+	margin-top: 10px;
 	a {
 		text-decoration: underline;
 	}
@@ -247,6 +249,8 @@
 			width: 30px;
 			position: static;
 			opacity: 1;
+			padding: 0;
+			box-sizing: border-box;
 		}
 	}
 	label {

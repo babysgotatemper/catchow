@@ -50,3 +50,8 @@ button{
   border: none;
 	outline: 0 none;
 }
+input{
+	padding: 0;
+	outline: 0 none;
+	border-radius: 0;
+}

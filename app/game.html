@@ -156,7 +156,7 @@
 				<div class="bdr"></div>
 				<img src="img/adult-2.png" alt="" class="game__pack">
 				<p class="game-text">
-					<span class="game-text__title">Вітаємо!</span> Ви пройшли усі кімнати та дізнались як харчування вливає на життя та активність вашого кота. <br>Щоб прийняти участь у розіграші заохочень* від Cat Chow®, <br>зробіть шер у FB або заповніть анкету.
+					<span class="game-text__title">Вітаємо!</span> Ви пройшли усі кімнати та дізнались як харчування вливає на життя та активність вашого кота. <br>Щоб Взяти участь у розіграші заохочень* від <b>Cat Chow®, <br>зробіть шер у FB або заповніть анкету.</b>
 					<label for="rules-check" class="rules-check"><input type="checkbox" id="rules-check" checked> Я погоджуюсь з <a href="rules.html" target="_blank">умовами</a> конкурсу</label>
 				</p>
 				<div class="game__window__btn-wrap _hidden">
@@ -166,37 +166,46 @@
 			</div>
 			<div class="game__window _text">
 				<p>
-					Заповніть анкету щоб прийняти участь <br> у розіграші призів від<b> Cat Chow®</b>
+					Заповніть анкету щоб взяти участь <br> у розіграші призів від<b> Cat Chow®</b>
 				</p>
 				<form name="anketa" action="">
 					<div class="input-wrap">
-						<input type="text" placeholder="ПІБ">
-						<span>+38 0</span><input type="tel">
-						<input type="text" placeholder="Ваш @ email">
+						<input type="text" placeholder="ПІБ" required>
+						<span>+38 0</span><input type="tel" maxlength="9" required>
+						<input type="text" placeholder="Ваш @ email" required>
 					</div>
 					<div class="input-wrap">
-						<input type="text" placeholder="Ім’я улюбленця" class="game-nic">
-						<span>Вік</span><input type="text" class="game-old"><span>роки</span>
-						<label for="gender1" class="game-gender"><input type="radio" id="gender1" name="gender">Кіт</label>
-						<label for="gender2" class="game-gender"><input type="radio" id="gender2" name="gender">Кішка</label>
+						<input type="text" placeholder="Ім’я улюбленця" class="game-nic" required>
+						<span>Вік</span><input type="text" class="game-old" maxlength="2" required><span>роки</span>
+						<label for="gender1" class="game-gender"><input type="radio" id="gender1" name="gender" required>Кіт</label>
+						<label for="gender2" class="game-gender"><input type="radio" id="gender2" name="gender" required>Кішка</label>
 						<span>Cтерилізований або кастрований</span>
-						<label for="sex1" class="game-sex"><input type="radio" id="sex1" name="sex">Так</label>
-						<label for="sex2" class="game-sex"><input type="radio" id="sex2" name="sex">Ні</label>
+						<label for="sex1" class="game-sex"><input type="radio" id="sex1" name="sex" required>Так</label>
+						<label for="sex2" class="game-sex"><input type="radio" id="sex2" name="sex" required>Ні</label>
 					</div>
 					<div class="game__window__btn-wrap">
-						<button type="submit" form="anketa" class=" game-btn link _red">Прийняти участь</button>
+						<button type="submit" form="anketa" class=" game-btn link _red">Взяти участь</button>
 					</div>
 				</form>
 			</div>
 
-			
+
 			<div class="game__window _text">
 				<p class="game-text _center">
 					Вітаємо! <br>Ви зареєструвались у акції* від Cat Chow®. <br>Тепер у вас є можливість отримати заохочення* <br> для вашого домашнього улюбленця
 				</p>
 
 				<div class="game__window__btn-wrap">
-					<a href="/" class="link _red">OK</a>
+					<a href="index.html" class="link _red">OK</a>
+				</div>
+			</div>
+			<div class="game__window _text">
+				<p class="game-text _center">
+					Вибачте, але виникла помилка. <br> Ваша анкета не зареєстрована. <br> Поверніться до заповнення анкети. <br>
+				</p>
+
+				<div class="game__window__btn-wrap">
+					<a href="index.html" class="link _red">НАЗАД</a>
 				</div>
 			</div>
 			<div class="panagination">
