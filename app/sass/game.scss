@@ -141,6 +141,11 @@
 	}
 	//room
 }
+.game__window._popup{
+//	display: block;
+	position: absolute;
+	z-index: 999;
+}
 
 .game__window svg{
 	width: 1000px;

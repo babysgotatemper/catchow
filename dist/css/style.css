@@ -773,6 +773,10 @@ game
       -webkit-border-radius: inherit;
               border-radius: inherit; }
 
+.game__window._popup {
+  position: absolute;
+  z-index: 999; }
+
 .game__window svg {
   width: 1000px;
   height: 600px;
