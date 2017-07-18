@@ -91,15 +91,36 @@ $(function () {
 	});
 
 	//form submit
-	$('[type="submit"]').click(function(){
-		if(1){
+	$('[type="submit"]').click(function () {
+		if (1) {
 			$('.game__window._succes').fadeIn();
-		}else{
+		} else {
 			$('.game__window._unsucces').fadeIn();
 		}
 	});
-	$('.hide').click(function(){
+	$('.hide').click(function () {
 		$(this).closest('.game__window').hide();
+	});
+
+	//gender
+	$('[name="gender"]').change(function () {
+		var type = $(this).attr('id');
+		$('span.gender').fadeIn();
+		$('span.'+type+', span.or').hide();
+	})
+
+	//mask
+	$('[type="tel"]').mask("+3(809) 999-9999");
+	$(".game-old").bind('keyup mouseup', function () {
+		var $caption = $(this).next('span');
+		var val = $(this).val();
+		if(val >= 2 && val <= 4){
+			$caption.html('роки');
+		}else if($(this).val() == 1){
+			$caption.html('рік');
+		}else{
+			$caption.html('років');
+		}
 	});
 
 });
@@ -110,37 +131,55 @@ function init() {
 	var gameWindowX = $(".game__window").offset().left;
 
 	//mobile
-	$(".game__window").on( "vmousemove", function(event) {
+	$(".game__window").on("vmousemove", function (event) {
 		letsMove(event);
 	});
-	
+
 	$(".game__window").mousemove(function (event) {
 		letsMove(event);
 	});
-	
-	function letsMove(event){
+
+	function letsMove(event) {
 		var x = event.pageX;
 		var y = event.pageY;
 
 		mskX = x - gameWindowX - 100 + 'px';
 		mskY = y - gameWindowY - 105 + 'px';
 
-		$('#svgmask1_image').attr({x: mskX,	y: mskY});
-		$('#svgmask2_image').attr({x: mskX,	y: mskY});
-		$('#svgmask3_image').attr({x: mskX,	y: mskY});
-		$('#svgmask4_image').attr({x: mskX,	y: mskY});
+		$('#svgmask1_image').attr({
+			x: mskX,
+			y: mskY
+		});
+		$('#svgmask2_image').attr({
+			x: mskX,
+			y: mskY
+		});
+		$('#svgmask3_image').attr({
+			x: mskX,
+			y: mskY
+		});
+		$('#svgmask4_image').attr({
+			x: mskX,
+			y: mskY
+		});
 
-		$('.bdr').css({"left": mskX, "top": mskY});
-		$('.room-bg._top').css({"mask-position-x": mskX, "mask-position-y": mskY})		
+		$('.bdr').css({
+			"left": mskX,
+			"top": mskY
+		});
+		$('.room-bg._top').css({
+			"mask-position-x": mskX,
+			"mask-position-y": mskY
+		})
 	}
 }
 //test
 
 
 function move(e) {
-    $element.css({
-        left: (e.pageX - 10) + 'px',
-        top: (e.pageY - 10) + 'px',
-        cursor: 'pointer'
-    });
+	$element.css({
+		left: (e.pageX - 10) + 'px',
+		top: (e.pageY - 10) + 'px',
+		cursor: 'pointer'
+	});
 }

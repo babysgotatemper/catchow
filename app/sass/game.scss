@@ -214,7 +214,7 @@
 		font-size: 24px;
 		line-height: 1;
 		position: relative;
-		bottom: 0px;
+		bottom: 2px;
 	}
 	input {
 		width: 100%;
@@ -229,10 +229,11 @@
 		outline: none;
 		&[type="tel"] {
 			display: inline-block;
-			width: 125px;
+			width: 195px;
 			position: static;
 			opacity: 1;
 			text-align: left;
+
 		}
 		&.game-nic {
 			float: left;
@@ -241,7 +242,7 @@
 		}
 	}
 	.game-old {
-		width: 30px;
+		width: 50px;
 		display: inline-block;
 		&:before {
 			content: 'Вік';

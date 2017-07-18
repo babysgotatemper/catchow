@@ -838,7 +838,7 @@ game
     font-size: 24px;
     line-height: 1;
     position: relative;
-    bottom: 0px; }
+    bottom: 2px; }
   .input-wrap input {
     width: 100%;
     font-size: 24px;
@@ -852,7 +852,7 @@ game
     outline: none; }
     .input-wrap input[type="tel"] {
       display: inline-block;
-      width: 125px;
+      width: 195px;
       position: static;
       opacity: 1;
       text-align: left; }
@@ -861,7 +861,7 @@ game
       display: inline-block;
       width: 200px; }
   .input-wrap .game-old {
-    width: 30px;
+    width: 50px;
     display: inline-block; }
     .input-wrap .game-old:before {
       content: 'Вік'; }
