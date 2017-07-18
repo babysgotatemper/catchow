@@ -110,14 +110,14 @@ $(function () {
 	})
 
 	//mask
-	$('[type="tel"]').mask("+3(809) 999-9999");
+	$('[type="tel"]').mask("+38(999)9999999");
 	$(".game-old").bind('keyup mouseup', function () {
 		var $caption = $(this).next('span');
 		var val = $(this).val();
 		if(val >= 2 && val <= 4){
-			$caption.html('роки');
+			$caption.html('роки ');
 		}else if($(this).val() == 1){
-			$caption.html('рік');
+			$caption.html('рік  ');
 		}else{
 			$caption.html('років');
 		}
